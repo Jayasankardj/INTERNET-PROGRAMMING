@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20px auto auto;
+    grid-template-rows: 20px auto;
+    gap: 10px; /* Spacing between grid items */
+    width: 300px;
+    height: 150px;
+    border: 2px dashed #ccc;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+/* A (Violet): Cell (0,0) */
+.a {
+    background-color: #9370DB; /* Violet */
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+/* B (Orange): Cells (0,2) and (1,2), spanning two rows */
+.b {
+    background-color: #FFA500; /* Orange */
+    grid-column: 3 / 4;
+    grid-row: 1 / 3; /* Spans two rows */
+}
+
+/* C (Blue): Cells (1,0) and (1,1), spanning two columns */
+.c {
+    background-color: #4682B4; /* Blue */
+    grid-column: 1 / 3; /* Spans two columns */
+    grid-row: 2 / 3;
+}
