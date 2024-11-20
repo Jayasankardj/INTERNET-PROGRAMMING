@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Info Form</title>
+</head>
+<body>
+    <h1>Enter Your Details</h1>
+    <form action="RequestInfoServlet" method="get">
+        <!-- Text field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <!-- Radio button -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <!-- Checkbox -->
+        <label>Interests:</label>
+        <input type="checkbox" id="coding" name="interest" value="Coding">
+        <label for="coding">Coding</label>
+        <input type="checkbox" id="sports" name="interest" value="Sports">
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="music" name="interest" value="Music">
+        <label for="music">Music</label><br><br>
+
+        <!-- Dropdown menu -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
