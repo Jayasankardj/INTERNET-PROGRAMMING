@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Error Element</title>
+</head>
+<body>
+
+    <button onclick="createErrorElement()">Click Me to Create Error Element</button>
+
+    <script>
+        function createErrorElement() {
+            // Create a new div element
+            var errorElement = document.createElement('div');
+
+            // Add some text to the error element
+            errorElement.textContent = 'Error! Filename not specified.';
+
+            // Optionally, you can apply some styles to the error element
+            errorElement.style.color = 'red';
+            errorElement.style.fontSize = '18px';
+            errorElement.style.fontWeight = 'bold';
+            errorElement.style.marginTop = '10px';
+
+            // Append the created element to the body
+            document.body.appendChild(errorElement);
+        }
+    </script>
+
+</body>
+</html>
