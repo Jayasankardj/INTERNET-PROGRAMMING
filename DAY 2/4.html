@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Paragraph Style Change</title>
+    <style>
+        /* Initial style for the paragraph */
+        #college-paragraph {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: black;
+        }
+        
+        /* Style for the highlighted bold word */
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <button type="button" onclick="changeStyle()">Change</button>
+    </form>
+
+    <p id="college-paragraph">
+        Welcome to our <b class="bold-word">college</b>. We provide a variety of programs and opportunities for students. 
+        The <b class="bold-word">faculty</b> is highly experienced and dedicated to helping students succeed. 
+        The <b class="bold-word">campus</b> is beautiful and filled with state-of-the-art facilities.
+    </p>
+
+    <script>
+        // Function to change the style of the paragraph
+        function changeStyle() {
+            var paragraph = document.getElementById('college-paragraph');
+            paragraph.style.fontFamily = 'Georgia, serif';
+            paragraph.style.fontSize = '20px';
+            paragraph.style.color = 'blue';
+        }
+
+        // Function to highlight bold words on mouseover
+        var boldWords = document.querySelectorAll('.bold-word');
+        
+        boldWords.forEach(function(word) {
+            word.addEventListener('mouseover', function() {
+                word.classList.add('highlight');
+            });
+
+            word.addEventListener('mouseout', function() {
+                word.classList.remove('highlight');
+            });
+        });
+    </script>
+
+</body>
+</html>
