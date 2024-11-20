@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Image Size</title>
+</head>
+<body>
+    <h1>Get Image Size</h1>
+
+    <label for="imageInput">Upload an Image:</label>
+    <input type="file" id="imageInput" accept="image/*">
+
+    <h2>Image Details:</h2>
+    <p><strong>Width:</strong> <span id="imageWidth">N/A</span> px</p>
+    <p><strong>Height:</strong> <span id="imageHeight">N/A</span> px</p>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const imageWidth = document.getElementById('imageWidth');
+        const imageHeight = document.getElementById('imageHeight');
+
+        imageInput.addEventListener('change', function () {
+            const file = imageInput.files[0];
+            if (file) {
+                const img = new Image();
+                img.onload = function () {
+                    // Get image width and height
+                    imageWidth.textContent = img.width;
+                    imageHeight.textContent = img.height;
+                };
+                img.src = URL.createObjectURL(file); // Load the selected image
+            }
+        });
+    </script>
+</body>
+</html>
