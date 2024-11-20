@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Bar Image Mouseover</title>
+</head>
+<body>
+
+    <img src="https://via.placeholder.com/150" alt="Image" id="myImage" 
+         onmouseover="changeStatus('Mouse is over the image!')" 
+         onmouseout="changeStatus('Mouse is not over the image.')">
+
+    <script>
+        function changeStatus(message) {
+            window.status = message; // Changes the status bar message
+        }
+    </script>
+
+</body>
+</html>
