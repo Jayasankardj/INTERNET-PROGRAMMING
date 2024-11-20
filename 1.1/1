@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Specification Form</title>
+</head>
+<body>
+    <h1>Laptop Specification Form</h1>
+    <form action="submit_form.php" method="POST">
+        <!-- Text field for Name -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <!-- Password field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <!-- Checkbox list for OS specification -->
+        <fieldset>
+            <legend>Operating System:</legend>
+            <input type="checkbox" id="macos" name="os[]" value="macOS">
+            <label for="macos">macOS</label><br>
+            <input type="checkbox" id="windows" name="os[]" value="Windows">
+            <label for="windows">Windows</label><br>
+            <input type="checkbox" id="ubuntu" name="os[]" value="Ubuntu">
+            <label for="ubuntu">Ubuntu</label><br>
+        </fieldset><br>
+        
+        <!-- Radio button for Brand specification -->
+        <fieldset>
+            <legend>Brand:</legend>
+            <input type="radio" id="hp" name="brand" value="HP" required>
+            <label for="hp">HP</label><br>
+            <input type="radio" id="lenovo" name="brand" value="Lenovo">
+            <label for="lenovo">Lenovo</label><br>
+            <input type="radio" id="dell" name="brand" value="Dell">
+            <label for="dell">Dell</label><br>
+            <input type="radio" id="apple" name="brand" value="Apple">
+            <label for="apple">Apple</label><br>
+        </fieldset><br>
+        
+        <!-- Text area for Address -->
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="40" required></textarea><br><br>
+        
+        <!-- Submit and Reset buttons -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
