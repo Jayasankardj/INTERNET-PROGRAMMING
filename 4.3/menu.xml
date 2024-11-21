@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurant>
+  <name>The Gourmet Place</name>
+  <description>Offering a variety of gourmet dishes, from appetizers to desserts.</description>
+  <menu>
+    <category>
+      <categoryName>Appetizers</categoryName>
+      <item>
+        <itemName>Spring Rolls</itemName>
+        <description>Crispy rolls filled with vegetables.</description>
+        <price>5.99</price>
+      </item>
+      <item>
+        <itemName>Bruschetta</itemName>
+        <description>Toasted bread with tomato, garlic, and basil.</description>
+        <price>6.99</price>
+      </item>
+    </category>
+    <category>
+      <categoryName>Main Courses</categoryName>
+      <item>
+        <itemName>Grilled Salmon</itemName>
+        <description>Fresh salmon grilled with lemon and herbs.</description>
+        <price>15.99</price>
+      </item>
+      <item>
+        <itemName>Spaghetti Bolognese</itemName>
+        <description>Pasta served with a rich meat sauce.</description>
+        <price>12.99</price>
+      </item>
+    </category>
+    <category>
+      <categoryName>Desserts</categoryName>
+      <item>
+        <itemName>Tiramisu</itemName>
+        <description>Classic Italian dessert with layers of coffee-soaked ladyfingers.</description>
+        <price>7.99</price>
+      </item>
+      <item>
+        <itemName>Chocolate Lava Cake</itemName>
+        <description>Rich chocolate cake with a molten center.</description>
+        <price>8.99</price>
+      </item>
+    </category>
+  </menu>
+</restaurant>
