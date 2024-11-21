@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <!-- Template to match the root element and generate the HTML structure -->
+  <xsl:template match="/restaurant">
+    <html>
+      <head>
+        <title><xsl:value-of select="name"/> - Menu</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+      </head>
+      <body>
+        <h1><xsl:value-of select="name"/></h1>
+        <p><xsl:value-of select="description"/></p>
+        <div id="menu">
+          <!-- Loop through menu categories -->
+          <xsl:for-each select="menu/category">
+            <h2><xsl:value-of select="categoryName"/></h2>
+            <table>
+              <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+              </tr>
+              <!-- Loop through items in each category -->
+              <xsl:for-each select="item">
+                <tr>
+                  <td><xsl:value-of select="itemName"/></td>
+                  <td><xsl:value-of select="description"/></td>
+                  <td>$<xsl:value-of select="price"/></td>
+                </tr>
+              </xsl:for-each>
+            </table>
+          </xsl:for-each>
+        </div>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
