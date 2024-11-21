@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Root element for the restaurant -->
+  <xs:element name="restaurant">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Name of the restaurant -->
+        <xs:element name="name" type="xs:string" />
+        <!-- Description of the restaurant -->
+        <xs:element name="description" type="xs:string" />
+        <!-- Menu category -->
+        <xs:element name="menu">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- Menu category (e.g., appetizers, main courses) -->
+              <xs:element name="category" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="categoryName" type="xs:string" />
+                    <xs:element name="item" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="itemName" type="xs:string" />
+                          <xs:element name="description" type="xs:string" />
+                          <xs:element name="price" type="xs:decimal" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
