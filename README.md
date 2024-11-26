@@ -13,6 +13,13 @@ USERNAME: admin
 
 PASSWORD: 1234
 
+
+
+## GITHUB REPOSITORY
+
+
+[REDIRECT TO PROJECT REPOSITORY](https://github.com/HEMANTH-1508/CHEMISTRY)
+
 ## Features
 
 - **Interactive Periodic Table**: Click on elements to see detailed information.
@@ -30,4 +37,4 @@ PASSWORD: 1234
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/CHEMISTRY.git
+   git clone https://github.com/HEMANTH-1508/CHEMISTRY.git
